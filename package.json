@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "name": "with-remix",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "remix-serve build",
+    "typecheck": "tsc",
+    "test": "pnpm test:e2e",
+    "test:e2e": "playwright test",
+    "postinstall": "pnpm exec playwright install"
+  },
+  "dependencies": {
+    "@remix-run/node": "^1.15.0",
+    "@remix-run/react": "^1.15.0",
+    "@remix-run/serve": "^1.15.0",
+    "isbot": "^3.6.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.33.0",
+    "@remix-run/dev": "^1.15.0",
+    "@remix-run/eslint-config": "^1.15.0",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.38.0",
+    "msw": "2.4.0",
+    "playwright": "^1.33.0",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  },
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
+}
